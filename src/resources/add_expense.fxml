@@ -1,0 +1,25 @@
+<AnchorPane fx:id="newExpenseForm" visible="false" layoutX="100" layoutY="100" prefWidth="400" prefHeight="300">
+    <stylesheets>
+        <!-- Add CSS for styling if necessary -->
+    </stylesheets>
+
+    <VBox alignment="CENTER" spacing="10" layoutX="50" layoutY="50">
+        <TextField fx:id="expenseNameField" promptText="Expense Name" />
+        <TextField fx:id="amountField" promptText="Amount" />
+        <TextField fx:id="membersField" promptText="Enter members (comma-separated)" />
+        
+        <ComboBox fx:id="paidByComboBox" promptText="Paid By">
+            <!-- Add sample users to the ComboBox -->
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="John" />
+                    <String fx:value="Jane" />
+                    <String fx:value="Alice" />
+                </FXCollections>
+            </items>
+        </ComboBox>
+        
+        <Button text="Submit" onAction="#handleSubmitExpense" />
+        <Button text="Cancel" onAction="#handleCancelExpense" />
+    </VBox>
+</AnchorPane>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.GroupBalanceController" spacing="10" padding="10">
+    <children>
+        <!-- Title -->
+        <Label text="Group Balances" font="$x11.bold" />
+
+        <!-- Dynamically created labels for each member's balance -->
+        <VBox fx:id="balanceVBox" spacing="5">
+            <!-- Member balance labels will be added here dynamically -->
+        </VBox>
+
+        <!-- Refresh Button -->
+        <Button text="Refresh Balances" onAction="#refreshBalances" />
+    </children>
+</VBox>

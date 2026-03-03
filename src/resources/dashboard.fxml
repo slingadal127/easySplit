@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="application.DashboardController">
+
+    <!-- Header with title and buttons -->
+    <VBox alignment="CENTER" layoutX="10" layoutY="10" minHeight="600.0" minWidth="600.0" spacing="20">
+        <!-- Dashboard Title Label -->
+        <Label style="-fx-font-size: 20px; -fx-font-weight: bold;" text="Dashboard" />
+        
+        <!-- Button Row -->
+        <HBox alignment="CENTER" spacing="20">
+            <Button fx:id="addGroupButton" onAction="#handleAddGroup" text="Add Group" />
+            <!-- Log Out Button -->
+            <Button fx:id="logoutButton" onAction="#handleLogout" text="Log Out" />
+        </HBox>
+	
+		<Label style="-fx-font-size: 13px; -fx-font-weight: bold;" text="Groups" />
+        <!-- No Groups Message -->
+        <Label fx:id="noGroupsMessage" text="No groups added" visible="false" />
+
+        <VBox fx:id="groupVBox" layoutX="50" layoutY="50" spacing="10"  >
+        <!-- Dynamically generated content will go here -->
+    </VBox>
+
+        
+    </VBox>
+
+</AnchorPane>
+

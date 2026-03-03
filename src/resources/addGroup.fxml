@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox minHeight="500.0" minWidth="400.0" spacing="10" style="-fx-padding: 20;" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AddGroupPopupController">
+    <Label text="Enter Group Name" />
+    <TextField fx:id="groupNameField" promptText="Group Name" />
+
+    <Label text="Members" />
+    <VBox fx:id="membersVBox" spacing="10">
+        <!-- Dynamic members will be added here -->
+    </VBox>
+
+    <Button onAction="#handleAddMember" prefHeight="32.0" prefWidth="105.0" text="Add Member" translateX="127.0" />
+    
+    <HBox alignment="CENTER" prefHeight="0.0" prefWidth="313.0" spacing="10" translateY="120.0">
+        <Button onAction="#handleSubmitGroup" text="Save" />
+        <Button onAction="#handleCancelGroup" text="Cancel" />
+    </HBox>
+</VBox>
