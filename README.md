@@ -51,7 +51,7 @@ The app expects a SQL Server database named `EasySplitDB`.
 Current connection string in `src/utils/SQLConnection.java`:
 
 ```java
-jdbc:sqlserver://YASHASWINI:1433;databaseName=EasySplitDB;integratedSecurity=true;encrypt=false;
+jdbc:sqlserver://<HOST>:1433;databaseName=EasySplitDB;integratedSecurity=true;encrypt=false;
 ```
 
 Update this host/auth config for your machine before running.
